@@ -23,8 +23,12 @@ namespace HelloWorld
             // Get our button from the layout resource,
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.MyButton);
+            ImageView img = FindViewById<ImageView>(Resource.Id.imageView1);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            button.Click += delegate 
+            {
+                img.Visibility = ViewStates.Visible;
+            };
         }
     }
 }
